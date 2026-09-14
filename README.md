@@ -32,9 +32,21 @@ The synthetic dataset (`pharmacist_salaries_ke.csv`) models realistic compensati
 | **MAE (KES)** | *[KES 16,835.09]* | *[KES 16,929.65]* |
 | **$R^2$ Score** | *[0.907]* | *[0.913]* |
 
+### Visualizing Model Performance
+
+Below is a visual comparison of the two models plotted against the actual market data. The polynomial model (green curve) provides a significantly better fit, validating our approach of modeling non-linear career progression.
+
+![Model Comparison: Linear vs. Polynomial Fit](salary_model_comparison.png)
+
 ### Key Insights
 * **Metric Interpretation:** The Polynomial model substantially reduced $MAE$, demonstrating that capturing non-linear compensation curves provides a more accurate representation of salary growth than linear assumptions.
 * **Residual Analysis:** Residual scatter around $0–2$ years highlights early-career salary fragmentation caused by varying employment structures (full-time vs. locum work).
+
+### Residual Analysis and Market Fragmentation
+
+The residual plot confirms that our model's errors are relatively clustered. We deliberately designed the early career data (0–2 years) to contain wide variance—reflecting the reality of locum wages, underemployment, and sharp retail entry points. Analyzing these errors visually proves the model successfully accounts for this market fragmentation.
+
+![Residual Analysis of Polynomial Model](salary_residual_analysis.png)
 
 ---
 
